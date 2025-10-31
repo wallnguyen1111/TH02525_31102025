@@ -54,8 +54,12 @@ public class TestSanPhamService {
         sanPhamService.addSanPham(sanPham);
         SanPham sanPhamKhac = new SanPham("SP1", "Ten1", 2025, 10.5f, 100, "DanhMuc1");
         IllegalArgumentException ex = assertThrows(IllegalArgumentException.class, () -> sanPhamService.addSanPham(sanPhamKhac));
-        assertEquals("Ma da ton tai", ex.getMessage());
+        assertEquals("Ma da ton tai roi", ex.getMessage());
     }
+
+
+
+
 
 
 }
